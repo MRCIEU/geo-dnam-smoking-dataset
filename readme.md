@@ -22,3 +22,16 @@ To download and normalize the dataset:
 ```
 Rscript prepare-dataset.r
 ```
+
+The outputs will be:
+
+`beta.rda` Matrix of normalized methylation levels (rows=CpG sites, cols=samples).
+
+`beta-adj.rda` Matrix of normalized methylation levels
+after regressing out the top 10
+principal components of the 10,000 most variable probes.
+
+`samples.csv` CSV file describing samples.
+
+`signal.rda` List containing the methylated ('M') and unmethylated ('U')
+raw signal matrices from which the normalized methylation levels were obtained. 
